@@ -1,36 +1,81 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+@mixin netbook {
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
 
 $h1-size: 60px;
+$h1-mob-size: 40px;
 $h2-size: 40px;
+$h2-mob-size: 30px;
 $h3-size: 30px;
+$h3-mob-size: 25px;
 $h5-size: 20px;
+$h5-mob-size: 18px;
 $h6-size: 16px;
+$h6-mob-size: 14px;
 $p-size: 18px;
 h1 {
   font-size: $h1-size;
+
+  @include mobile {
+    font-size: $h1-mob-size;
+  }
 }
 h2 {
   font-size: $h2-size;
+
+  @include mobile {
+    font-size: $h2-mob-size;
+  }
 }
 h3 {
   font-size: $h3-size;
+
+  @include mobile {
+    font-size: $h3-mob-size;
+  }
 }
 h5 {
   font-size: $h5-size;
+
+  @include mobile {
+    font-size: $h5-mob-size;
+  }
 }
 h6 {
   font-size: $h6-size;
+
+  @include mobile {
+    font-size: $h6-mob-size;
+  }
 }
 p {
   font-size: $p-size;
 }
 
 $container-width: 1300px;
-$container-padding: 10px;
+$container-padding: 25px;
 .container {
   max-width: $container-width;
   padding: 0 $container-padding;
@@ -57,6 +102,12 @@ $container-padding: 10px;
   &--mdl {
     height: 47px;
   }
+
+  @include mobile {
+    &--mdl {
+      height: 34px;
+    }
+  }
 }
 
 .font {
@@ -80,6 +131,18 @@ $container-padding: 10px;
     bottom: 0;
     transform: translateY(50%);
   }
+
+  @include mobile {
+    max-width: calc(100vw - $container-padding * 2);
+
+    &--bottom {
+      transform: translateY(12%);
+    }
+
+    &--mob-stretch {
+      align-items: stretch !important;
+    }
+  }
 }
 
 .header {
@@ -93,6 +156,7 @@ $container-padding: 10px;
 
   .header__wrapper {
     justify-content: space-between;
+    align-items: center;
   }
 
   .header__block {
@@ -108,6 +172,21 @@ $container-padding: 10px;
       display: flex;
       align-items: center;
       gap: 10px;
+    }
+  }
+
+  .header__menu-icon {
+    display: none;
+  }
+
+  @include mobile {
+    .header__nav,
+    .header__info {
+      display: none;
+    }
+
+    .header__menu-icon {
+      display: block;
     }
   }
 }
@@ -177,13 +256,41 @@ $container-padding: 10px;
   .intro__item-subtitle {
     font-weight: 400;
   }
+
+  @include mobile {
+    padding: 60px 0 580px;
+
+    .intro__block {
+      &--flex {
+        gap: 60px;
+      }
+
+      &--mob-column {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      &--mob-columnr {
+        flex-direction: column-reverse;
+      }
+    }
+
+    .intro__item {
+      padding: 20px 30px;
+    }
+
+    .intro__img {
+      height: auto;
+      width: 100%;
+    }
+  }
 }
 
 .experience {
   position: relative;
   background: #08091d;
   color: white;
-  padding: 180px 0;
+  padding: 180px 0 233px;
 
   .experience__block {
     &--flex-between {
@@ -224,9 +331,13 @@ $container-padding: 10px;
     margin-bottom: 40px;
   }
 
-  .experience__item-title {
+  .experience__item-value {
     color: #f3f301;
     margin-bottom: 6px;
+  }
+
+  .experience__title {
+    margin-bottom: 40px;
   }
 
   .experience__img {
@@ -234,6 +345,37 @@ $container-padding: 10px;
 
     &--sml {
       height: 60px;
+    }
+  }
+
+  @include mobile {
+    padding: 176px 0 190px;
+
+    .experience__block {
+      &--platform {
+        transform: translateY(75%);
+        padding: 35px 60px;
+      }
+
+      &--mob-column {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+      }
+
+      &--mob-gap {
+        gap: 10px;
+      }
+    }
+
+    .experience__img {
+      height: auto;
+      width: 100%;
+
+      &--sml {
+        height: 60px;
+        width: fit-content;
+      }
     }
   }
 }
@@ -306,6 +448,18 @@ $container-padding: 10px;
     font-weight: 400;
     line-height: normal;
   }
+
+  @include mobile {
+    padding: 480px 0 90px;
+
+    .reviews__block {
+      &--mob-column {
+        flex-direction: column;
+        align-items: center;
+        gap: 120px;
+      }
+    }
+  }
 }
 
 .footer {
@@ -338,5 +492,24 @@ $container-padding: 10px;
     display: block;
     width: 40px;
     height: 40px;
+  }
+
+  @include mobile {
+    .footer__wrapper {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .footer__block {
+      &--flex {
+        justify-content: center;
+        gap: 30px;
+      }
+
+      &--mob-column {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
   }
 }

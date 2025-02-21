@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./static/css/reset.css" />
-    <link rel="stylesheet" href="./static/css/style.css" />
+    <link rel="stylesheet" href="./static/css/style.css?v=1" />
     <title>Main Page</title>
   </head>
   <body>
@@ -18,7 +18,7 @@
               class="logo logo--mdl"
             />
           </div>
-          <div class="header__block">
+          <div class="header__block header__info">
             <div class="header__item header__item">
               <a href="#" class="header__item-link header__item-link--flex">
                 <p class="header__item-title">+48-881-016-026</p>
@@ -77,14 +77,30 @@
               <p class="header__item-title">Katalog</p>
             </a>
           </div>
+          <svg
+            class="header__menu-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="26"
+            viewBox="0 0 12 11"
+            fill="none"
+          >
+            <path
+              d="M0 0.666667C0 0.298477 0.298477 0 0.666667 0H11.3333C11.7015 0 12 0.298477 12 0.666667V0.666667C12 1.03486 11.7015 1.33333 11.3333 1.33333H0.666667C0.298477 1.33333 0 1.03486 0 0.666667V0.666667ZM4 5.33333C4 4.96514 4.29848 4.66667 4.66667 4.66667H11.3333C11.7015 4.66667 12 4.96514 12 5.33333V5.33333C12 5.70152 11.7015 6 11.3333 6H4.66667C4.29848 6 4 5.70152 4 5.33333V5.33333ZM0 10C0 9.63181 0.298477 9.33333 0.666667 9.33333H11.3333C11.7015 9.33333 12 9.63181 12 10V10C12 10.3682 11.7015 10.6667 11.3333 10.6667H0.666667C0.298477 10.6667 0 10.3682 0 10V10Z"
+              fill="black"
+            />
+          </svg>
         </div>
       </header>
       <section class="intro">
         <div class="intro__wrapper container">
-          <div class="intro__block intro__block--flex">
+          <div
+            class="intro__block intro__block--flex intro__block--mob-columnr"
+          >
             <div class="intro__block">
               <h1 class="intro__title">
-                <span class="font--highlight">Czystość</span> bez kompromisów!
+                <span class="font--highlight">Czystość</span> bez<br />
+                kompromisów!
               </h1>
               <h5 class="intro__subtitle">
                 Niezawodna usługa sprzątania dla domów i firm.<br />Pracujemy
@@ -147,7 +163,9 @@
               />
             </div>
           </div>
-          <div class="intro__block intro__block--flex fixed fixed--bottom">
+          <div
+            class="intro__block intro__block--flex intro__block--mob-column fixed fixed--bottom fixed--mob-stretch"
+          >
             <div class="intro__item">
               <svg
                 class="intro__item-icon"
@@ -237,7 +255,9 @@
       </section>
       <section class="experience">
         <div class="experience__wrapper container">
-          <div class="experience__block experience__block--flex-between">
+          <div
+            class="experience__block experience__block--flex-between experience__block--mob-column"
+          >
             <div class="experience__block">
               <h5 class="experience__title experience__title--highlight">
                 Про нас
@@ -250,24 +270,26 @@
                 środowiska środki czyszczące pozwalają nam osiągać<br />doskonałe
                 efekty.
               </p>
-              <div class="experience__block experience__block--inline-flex">
+              <div
+                class="experience__block experience__block--inline-flex experience__block--mob-gap"
+              >
                 <div class="experience__item experience__item--inline-flex">
-                  <h3 class="experience__item-title">500+</h3>
-                  <p class="experience__item-subtitle">
+                  <h3 class="experience__item-value">500+</h3>
+                  <h6 class="experience__item-title">
                     Завершених<br />проектів
-                  </p>
+                  </h6>
                 </div>
                 <div class="experience__item experience__item--inline-flex">
-                  <h3 class="experience__item-title">840+</h3>
-                  <p class="experience__item-subtitle">
+                  <h3 class="experience__item-value">840+</h3>
+                  <h6 class="experience__item-title">
                     Задоволених<br />клієнтів
-                  </p>
+                  </h6>
                 </div>
                 <div class="experience__item experience__item--inline-flex">
-                  <h3 class="experience__item-title">250+</h3>
-                  <p class="experience__item-subtitle">
+                  <h3 class="experience__item-value">250+</h3>
+                  <h6 class="experience__item-title">
                     Постійних<br />клієнтів
-                  </p>
+                  </h6>
                 </div>
               </div>
             </div>
@@ -279,7 +301,7 @@
               />
             </div>
             <div
-              class="experience__block experience__block--flex-around experience__block--platform fixed fixed--bottom"
+              class="experience__block experience__block--flex-around experience__block--mob-column experience__block--platform fixed fixed--bottom"
             >
               <img
                 src="./static/images/partner-img-1.png"
@@ -311,13 +333,13 @@
             <span class="font--highlight">Відгуки</span> від клієнтів
           </h2>
           <div
-            class="reviews__block reviews__block--flex-center reviews__block--big-gap"
+            class="reviews__block reviews__block--flex-center reviews__block--mob-column reviews__block--big-gap"
           >
             <div class="reviews__item">
               <div class="reviws__border-wrapper">
                 <img
                   src="./static/images/revier-img-1.png"
-                  alt=""
+                  alt="Revier img"
                   class="reviews__item-img reviews__item-img--mdl"
                 />
               </div>
@@ -536,7 +558,9 @@
       </section>
       <footer class="footer">
         <div class="footer__wrapper container">
-          <div class="footer__block footer__block--flex footer__block--mdl-gap">
+          <div
+            class="footer__block footer__block--flex footer__block--mob-column footer__block--mdl-gap"
+          >
             <img
               src="./static/images/logo.png"
               alt="logotype"
