@@ -1,0 +1,41 @@
+{% load static %}
+
+<footer class="footer__wrapper">
+  <div class="container footer_container">
+    <div class="footer__logo">
+      <div class="footer__logo_img">
+        <img src="{% static 'logo.png' %}" alt="" />
+      </div>
+      <p class="footer__nip">
+        NIP <span>679</span><span>3322</span><span>462</span>
+      </p>
+    </div>
+    <div class="footer__links_container">
+      <ul class="footer__links">
+        <a href="#" class="footer__link">
+          <li>Usługi</li>
+        </a>
+        <a href="{% url 'about_us' %}" class="footer__link">
+          <li>O nas</li>
+        </a>
+        <a href="{% url 'contact_us' %}" class="footer__link">
+          <li>Kontakty</li>
+        </a>
+      </ul>
+    </div>
+    <div class="footer__socials">
+      <a class="footer__social" href="#">
+        <img src="{% static 'instagram_default.png' %}" alt="" />
+      </a>
+      <a class="footer__social" href="#">
+        <img src="{% static 'telegram_default.png' %}" alt="" />
+      </a>
+      <a class="footer__social" href="#">
+        <img src="{% static 'whatapp_default.png' %}" alt="" />
+      </a>
+      <a class="footer__social" href="#">
+        <img src="{% static 'facebook_default.png' %}" alt="" />
+      </a>
+    </div>
+  </div>
+</footer>

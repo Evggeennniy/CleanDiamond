@@ -1,0 +1,5 @@
+.env
+venv/
+preps/
+migrations/
+__pycache__/

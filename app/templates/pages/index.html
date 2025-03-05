@@ -1,0 +1,182 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<body>
+  {% include 'header.html' %}
+  <section class="hero__wrapper_home">
+    <div class="container hero__container_home">
+      <div class="hero__container_content_home">
+        <div class="hero__info_container_home">
+          <h1 class="hero__info_title_home">
+            <span>Czystość</span> bez kompromisów!
+          </h1>
+          <p class="hero__info_desc_home">
+            Niezawodna usługa sprzątania dla domów i firm. Pracujemy sprawnie,
+            szybko i z miłością do czystości!
+          </p>
+          <div class="hero__info_btns_home">
+            <a href="#" class="hero__info_price_btn_home">
+              <p class="hero__info_price_btn_text">Cennik usług</p>
+              <img src="{% static 'arrow_right_white.svg' %}" alt="" />
+            </a>
+            <a href="#" class="hero__info_inst_btn_home">
+              <img src="{% static 'instagram_blue.png' %}" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="hero__img_container_home">
+          <img src="{% static 'home_hero_img.png' %}" alt="" />
+        </div>
+      </div>
+      <div class="experience__cards_container">
+        <div class="experience__card">
+          <img src="{% static 'hand_icon.png' %}" alt="" />
+          <h5 class="experience__card_title">5+ lat doświadczenia</h5>
+          <p class="experience__card_desc">
+            Certyfikowani specjaliści, sprawdzone metody.
+          </p>
+        </div>
+        <div class="experience__card">
+          <img src="{% static 'vacuum_cleaner_icon.png' %}" alt="" />
+          <h5 class="experience__card_title">Profesjonalny sprzęt</h5>
+          <p class="experience__card_desc">
+            Dla efektywnego i bezpiecznego sprzątania
+          </p>
+        </div>
+        <div class="experience__card">
+          <img src="{% static 'idea_icon.png' %}" alt="" />
+          <h5 class="experience__card_title">Indywidualne podejście</h5>
+          <p class="experience__card_desc">
+            Dobieramy rozwiązania do waszych zadań
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="experience__wrapper">
+    <div class="container experience__container">
+      <div class="experience__info_container">
+        <div class="experience__info_text_container">
+          <div class="experience__info_top_text">
+            <div class="experience__info_text_title_container">
+              <p class="experience__info_text_about">O nas</p>
+              <h4 class="experience__info_text_title">
+                Czystość, na którą możesz się położyć
+              </h4>
+            </div>
+            <p class="experience__info_text_desc">
+              Nasze doświadczenie, nowoczesne technologie i przyjazne dla
+              środowiska środki czyszczące pozwalają nam osiągać doskonałe
+              efekty.
+            </p>
+          </div>
+          <div class="experience__info_experience_container">
+            <div class="experience__info_experience">
+              <h4 class="experience__info_experience_title">500+</h4>
+              <p class="experience__info_experience_desc">Ukończone projekty</p>
+            </div>
+            <div class="experience__info_experience">
+              <h4 class="experience__info_experience_title">840+</h4>
+              <p class="experience__info_experience_desc">
+                Zadowolonych klientów
+              </p>
+            </div>
+            <div class="experience__info_experience">
+              <h4 class="experience__info_experience_title">250+</h4>
+              <p class="experience__info_experience_desc">Stałych klientów</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience__info_img_container">
+          <img src="{% static 'experience_img.png' %}" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="reviews__wrapper">
+    <div class="container reviews__container">
+      <div class="experience__companies_container">
+        <div class="experience__company">
+          <img src="{% static 'vileda_img.png' %}" alt="" />
+        </div>
+        <div class="experience__company">
+          <img src="{% static 'chempspec_img.png' %}" alt="" />
+        </div>
+        <div class="experience__company">
+          <img src="{% static 'kiehl_img.png' %}" alt="" />
+        </div>
+        <div class="experience__company">
+          <img src="{% static 'karcher_img.png' %}" alt="" />
+        </div>
+      </div>
+      <div class="reviews__content">
+        <h4 class="reviews__title"><span>Opinie</span> klientów</h4>
+        <div class="reviews__cards__container">
+          <div class="review__card">
+            <div class="review__card_img">
+              <img src="{% static 'blone_woman_img.png' %}" alt="" />
+            </div>
+            <div class="review__name">
+              <div class="review__rating">
+                <img src="{% static 'star_icon.png' %}" alt="" />
+                <img src="{% static 'star_icon.png' %}" alt="" />
+                <img src="{% static 'star_icon.png' %}" alt="" />
+                <img src="{% static 'star_icon.png' %}" alt="" />
+                <img src="{% static 'star_icon.png' %}" alt="" />
+              </div>
+              <h4 class="review__person_name">Angela Wanat</h4>
+            </div>
+            <img src="{% static 'quotes_icon.png' %}" alt="" />
+            <p class="review__text">
+              Świetna obsługa! Szybko i sprawnie posprzątane, ekologicznie
+              zasoby Co jest dużym plusem.
+            </p>
+          </div>
+          <div class="review__card review__card_main">
+            <div class="review__card_img">
+              <img src="{% static 'review_guy_img.png' %}" alt="" />
+            </div>
+            <div class="review__name">
+              <div class="review__rating">
+                <img src="{% static 'star_white_icon.png' %}" alt="" />
+                <img src="{% static 'star_white_icon.png' %}" alt="" />
+                <img src="{% static 'star_white_icon.png' %}" alt="" />
+                <img src="{% static 'star_white_icon.png' %}" alt="" />
+                <img src="{% static 'star_white_icon.png' %}" alt="" />
+              </div>
+              <h4 class="review__person_name review__person_name_main">
+                Krzysztof Zaborski
+              </h4>
+            </div>
+            <img src="{% static 'quotes_white_icon.png' %}" alt="" />
+            <p class="review__text review__text_main">
+              Profesjonalnie i szybko ,wszystko w najlepszym porządku. Polecamy!
+            </p>
+          </div>
+          <div class="review__card">
+            <div class="review__card_img">
+              <img src="{% static 'brunette_woman_img.png' %}" alt="" />
+            </div>
+            <div class="review__name">
+              <div class="review__rating">
+                <img src="{% static 'star_icon.png' %}" alt="" />
+                <img src="{% static 'star_icon.png' %}" alt="" />
+                <img src="{% static 'star_icon.png' %}" alt="" />
+                <img src="{% static 'star_icon.png' %}" alt="" />
+                <img src="{% static 'star_icon.png' %}" alt="" />
+              </div>
+              <h4 class="review__person_name">Tamara Gulczynska</h4>
+            </div>
+            <img src="{% static 'quotes_icon.png' %}" alt="" />
+            <p class="review__text">
+              Posprzątali po remoncie. Wszystko jest idealnie czyste. Bardzo
+              zadowolony z rezultatu!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+</body>
+{% endblock %}

@@ -1,0 +1,207 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<body>
+  {% include 'header.html' %}
+  <section class="hero__wrapper_about">
+    <div class="container hero__container_about">
+      <div class="hero__img_container_about">
+        <img src="{% static 'about_hero_img.png' %}" alt="" />
+      </div>
+      <div class="hero__content_container_about">
+        <div class="hero__text_container">
+          <div class="hero__content_title_container">
+            <div class="hero__content_title_text">
+              <p class="hero__content_title_about">O nas</p>
+              <h4 class="hero__content_title_about_about">
+                Czystość <span>bez żadnych problemów!</span>
+              </h4>
+            </div>
+            <p class="hero__content_title_desc_about">
+              Jesteśmy zespołem profesjonalnych usług sprzątających. Wiemy,
+              jakie jest idealny porządek. Zawsze robimy-perfekcyjnie. Mamy duże
+              doświadczenie i zrobimy wszystko, aby zapewnić nieskazitelną
+              czystość waszym obiektem
+            </p>
+          </div>
+          <div class="hero__info_container_about">
+            <div class="hero__cards_container">
+              <div class="hero__card_container">
+                <img src="{% static 'verified_icon.png' %}" alt="" />
+                <div class="hero__card_text_container">
+                  <p class="hero__card_title">Niezawodność.</p>
+                  <p class="hero__card_desc">
+                    Zawsze dotrzymujemy terminów i wypełniamy wszystkie
+                    zobowiązania.
+                  </p>
+                </div>
+              </div>
+              <div class="hero__card_container">
+                <img src="{% static 'strong_arm_icon.png' %}" alt="" />
+                <div class="hero__card_text_container">
+                  <p class="hero__card_title">Profesjonalizm</p>
+                  <p class="hero__card_desc">
+                    Specjaliści kontrolują standardy jakości i bezpieczeństwa.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="hero__quote_container">
+              <div class="hero__quote_img_top">
+                <img src="{% static 'quotes_icon.png' %}" alt="" />
+              </div>
+              <p class="hero__quote_text">
+                Używamy najnowocześniejszego sprzętu i przyjaznych dla
+                środowiska produktów, aby osiągnąć maksymalne rezultaty.
+              </p>
+              <div class="hero__quote_img_bottom">
+                <img src="{% static 'quotes_icon.png' %}" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__btns_container_about">
+          <a class="hero__contact_btn_about" href="../pages/contact.html">
+            <p class="hero__contact_btn_text_about">Skontaktuj się z nami</p>
+            <img src="{% static 'arrow_right_whiteng.png' %}" alt="" />
+          </a>
+          <div class="hero__contact_phone_about">
+            <div class="hero__contact_phone_img_about">
+              <img src="{% static 'phone.svg' %}" alt="" />
+            </div>
+            <div class="hero__contact_phone_text_about">
+              <p class="hero__contact_phone_title_about">Telefon</p>
+              <p class="hero__contact_phone_desc_about">+48-881-016-026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="info__wrapper">
+    <div class="info__img_container">
+      <img src="{% static 'about_section_img.png' %}" alt="" />
+    </div>
+    <div class="info__text_wrapper">
+      <div class="container info__container">
+        <div class="info__text_container">
+          <h4 class="info__text_title">Jakość nasze usługi</h4>
+          <p class="info__text_desc">
+            Dowiedz się, co mówią o nas nasi zadowoleni klienci i dlaczego
+            wybierają nas ponownie
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="reviews__wrapper about">
+    <div class="container reviews__container">
+      <div class="reviews__content about">
+        <div class="reviews__cards__container about">
+          <div class="review__card about">
+            <div class="review__card_img about">
+              <img src="{% static 'anna_img.png' %}" alt="" />
+            </div>
+            <div class="review__name about">
+              <div class="review__rating">
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+              </div>
+              <h4 class="review__person_name about">Angela Wanat</h4>
+            </div>
+            <img src="{% static 'quotes_icon.png' %}" alt="" />
+            <p class="review__text about">
+              Jestem bardzo zadowolony z usług! Mieszkanie lśni czystością, a
+              sprzątanie zostało wykonane szybko i schludnie.
+            </p>
+          </div>
+          <div class="review__card about">
+            <div class="review__card_img about">
+              <img src="{% static 'katarzyna_img.png' %}" alt="" />
+            </div>
+            <div class="review__name about">
+              <div class="review__rating">
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+              </div>
+              <h4 class="review__person_name about">Katarzyna Nowak</h4>
+            </div>
+            <img src="{% static 'quotes_icon.png' %}" alt="" />
+            <p class="review__text about">
+              Zamówiłem generalne sprzątanie, a efekt przerósł moje oczekiwania!
+              Dziękuję z całego serca
+            </p>
+          </div>
+          <div class="review__card about review__card_main about">
+            <div class="review__card_img about">
+              <img src="{% static 'marta_img.png' %}" alt="" />
+            </div>
+            <div class="review__name about">
+              <div class="review__rating">
+                <img src="{% static 'white_star_small.png' %}" alt="" />
+                <img src="{% static 'white_star_small.png' %}" alt="" />
+                <img src="{% static 'white_star_small.png' %}" alt="" />
+                <img src="{% static 'white_star_small.png' %}" alt="" />
+                <img src="{% static 'white_star_small.png' %}" alt="" />
+              </div>
+              <h4 class="review__person_name review__person_name_main about">
+                Marta Wiśniewska
+              </h4>
+            </div>
+            <img src="{% static 'quotes_white_icon.png' %}" alt="" />
+            <p class="review__text review__text_main about">
+              Sprzątanie na najwyższym poziomie! Miła obsługa, produkty wysokiej
+              jakości i idealny porządek po sprzątaniu. Polecam!
+            </p>
+          </div>
+          <div class="review__card about">
+            <div class="review__card_img about">
+              <img src="{% static 'jakub_img.png' %}" alt="" />
+            </div>
+            <div class="review__name about">
+              <div class="review__rating">
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+              </div>
+              <h4 class="review__person_name about">Jakub Kamiński</h4>
+            </div>
+            <img src="{% static 'quotes_icon.png' %}" alt="" />
+            <p class="review__text about">
+              Po remoncie mieszkanie było w fatalnym stanie, ale ekipa dała radę
+              10 na 10!
+            </p>
+          </div>
+          <div class="review__card about">
+            <div class="review__card_img about">
+              <img src="{% static 'olga_img.png' %}" alt="" />
+            </div>
+            <div class="review__name about">
+              <div class="review__rating">
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+                <img src="{% static 'blue_star_small.png' %}" alt="" />
+              </div>
+              <h4 class="review__person_name about">Olga Lewandowska</h4>
+            </div>
+            <img src="{% static 'quotes_icon.png' %}" alt="" />
+            <p class="review__text about">
+              Regularnie korzystam z usług i zawsze jestem zadowolony!
+              Przyjeżdżają na czas i pracują szybko.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include 'footer.html' %}
+</body>
+{% endblock %}
