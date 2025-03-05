@@ -1,0 +1,182 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<body>
+  {% include 'header.html' %}
+  <section class="services__wrapper">
+    <div class="container services__container">
+      <div class="services__content_container">
+        <div class="services__content_left">
+          <div class="services__content_img">
+            <img src="{% static 'uslugi_img.png' %}" alt="" />
+          </div>
+          <div class="services__content_left_btns">
+            <a href="#" class="services__content_left_order_btn">
+              <p class="services__content_left_order_btn_text">
+                Zamówić sprzątanie
+              </p>
+              <img src="{% static 'arrow_right_white.svg' %}" alt="" />
+            </a>
+            <a href="#" class="services__content_left_phone">
+              <img src="{% static 'phone.svg' %}" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="services__content_right">
+          <div class="service__info_container">
+            <div class="service__info_main">
+              <div class="service__info_main_title">
+                <img src="{% static 'home_blue_icon.png' %}" alt="" />
+                <h4 class="service__info_main_title_text">
+                  Sprzątanie mieszkań i domów
+                </h4>
+              </div>
+              <p class="service__info_price">
+                <span>795</span> - <span>145</span> PLN
+              </p>
+            </div>
+            <div class="service__info_price_variant">
+              <h5 class="service__info_price_variant_title">
+                Generalne sprzątanie
+              </h5>
+              <p class="service__info_price"><span>45</span> PLN</p>
+            </div>
+            <div class="service__info_price_variant">
+              <h5 class="service__info_price_variant_title">
+                Sprzątanie bieżące
+              </h5>
+              <p class="service__info_price"><span>85</span> PLN</p>
+            </div>
+            <div class="service__info_price_variant">
+              <h5 class="service__info_price_variant_title">
+                Ekspresowe sprzątanie
+              </h5>
+              <p class="service__info_price"><span>113</span> PLN</p>
+            </div>
+            <div class="service__info_price_variant">
+              <h5 class="service__info_price_variant_title">
+                Sprzątanie po imprezie
+              </h5>
+              <p class="service__info_price"><span>243</span> PLN</p>
+            </div>
+          </div>
+          <div class="service__info_container">
+            <div class="service__info_main">
+              <div class="service__info_main_title">
+                <img src="{% static 'tools_icon.png' %}" alt="" />
+                <h4 class="service__info_main_title_text">
+                  Sprzątanie po remoncie
+                </h4>
+              </div>
+              <p class="service__info_price">
+                <span>555</span> - <span>155</span> PLN
+              </p>
+            </div>
+            <div class="service__info_price_variant">
+              <h5 class="service__info_price_variant_title">
+                Usuwanie kurzu budowlanego
+              </h5>
+              <p class="service__info_price"><span>73</span> PLN</p>
+            </div>
+            <div class="service__info_price_variant">
+              <h5 class="service__info_price_variant_title">
+                Czyszczenie plam po farbie, kleju, tynku
+              </h5>
+              <p class="service__info_price"><span>73</span> PLN</p>
+            </div>
+            <div class="service__info_price_variant">
+              <h5 class="service__info_price_variant_title">
+                Mycie podłóg, ścian, drzwi
+              </h5>
+              <p class="service__info_price"><span>73</span> PLN</p>
+            </div>
+            <div class="service__info_price_variant">
+              <h5 class="service__info_price_variant_title">
+                Czyszczenie armatury sanitarnej i powierzchni kuchennych
+              </h5>
+              <p class="service__info_price"><span>73</span> PLN</p>
+            </div>
+          </div>
+          <div class="service__info_container">
+            <div class="service__info_main">
+              <div class="service__info_main_title">
+                <img src="{% static 'office_icon.png' %}" alt="" />
+                <h4 class="service__info_main_title_text">Sprzątanie biur</h4>
+              </div>
+              <p class="service__info_price">
+                <span>555</span> - <span>155</span> PLN
+              </p>
+            </div>
+            <div class="service__info_price_variant">
+              <h5 class="service__info_price_variant_title">
+                Codzienne lub generalne sprzątanie
+              </h5>
+              <p class="service__info_price"><span>93</span> PLN</p>
+            </div>
+            <div class="service__info_price_variant">
+              <h5 class="service__info_price_variant_title">
+                Usuwanie kurzu z miejsc pracy
+              </h5>
+              <p class="service__info_price"><span>303</span> PLN</p>
+            </div>
+            <div class="service__info_price_variant">
+              <h5 class="service__info_price_variant_title">
+                Czyszczenie sprzętu biurowego i mebli
+              </h5>
+              <p class="service__info_price"><span>103</span> PLN</p>
+            </div>
+            <div class="service__info_price_variant">
+              <h5 class="service__info_price_variant_title">
+                Mycie podłóg i toalet
+              </h5>
+              <p class="service__info_price"><span>53</span> PLN</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="services__cards_container">
+        <div class="services__card">
+          <img src="{% static 'leaf_icon.png' %}" alt="" />
+          <div class="services__card_text">
+            <h5 class="services__card_title">Bezpieczne eko-środki</h5>
+            <p class="services__card_desc">
+              Używamy wyłącznie certyfikowanej, hipoalergicznej chemii,
+              bezpiecznej dla dzieci i zwierząt.
+            </p>
+          </div>
+        </div>
+        <div class="services__card">
+          <img src="{% static 'rocket_icon.png' %}" alt="" />
+          <div class="services__card_text">
+            <h5 class="services__card_title">Szybko i dokładnie!</h5>
+            <p class="services__card_desc">
+              Sprzątamy starannie, bez zbędnych opóźnień. Standardowe sprzątanie
+              – od 2 godzin.
+            </p>
+          </div>
+        </div>
+        <div class="services__card">
+          <img src="{% static 'clock_icon.png' %}" alt="" />
+          <div class="services__card_text">
+            <h5 class="services__card_title">Dostosowujemy się do Ciebie!</h5>
+            <p class="services__card_desc">
+              Pracujemy codziennie w godzinach które Ci odpowiadają.
+            </p>
+          </div>
+        </div>
+        <div class="services__card">
+          <img src="{% static 'bucket_icon.png' %}" alt="" />
+          <div class="services__card_text">
+            <h5 class="services__card_title">
+              Nasi doświadczeni profesjonaliści
+            </h5>
+            <p class="services__card_desc">
+              Nasi specjaliści są przeszkoleni i korzystają z profesjonalnego
+              sprzętu.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include 'footer.html' %}
+</body>
+{% endblock %}

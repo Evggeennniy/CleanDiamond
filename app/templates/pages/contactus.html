@@ -1,0 +1,115 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<body>
+  {% include 'header.html' %}
+
+  <section class="hero__wrapper_contact">
+    <div class="hero__wrapper_img_contact">
+      <img src="{% static 'contact_hero_img.png' %}" alt="" />
+    </div>
+    <div class="container hero__container_contact">
+      <form
+        method="post"
+        action="{% url 'send_contact_form' %}"
+        class="hero__form_container"
+      >
+        {% csrf_token %}
+        <p class="hero__form_title">Ми зв'яжемося з вами</p>
+        <div class="form__inputs__container">
+          <div class="form__input_container">
+            <label class="form__name_input_text" for="name">Ім'я</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              class="form__input_field"
+              placeholder="Христина Соломій"
+            />
+          </div>
+
+          <div class="form__input_container">
+            <label class="form__name_input_text" for="email">Пошта</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              class="form__input_field"
+              placeholder="testmail.gmail.com"
+            />
+          </div>
+
+          <div class="form__input_container form__textarea_container">
+            <label class="form__name_input_text" for="work">Обсяг роботи</label>
+            <textarea
+              id="work"
+              class="form__input_field form__textarea"
+              placeholder="Опис замовлення"
+              name="message"
+            ></textarea>
+          </div>
+        </div>
+        <div class="form__bottom_btns">
+          <div class="form__bottom_btns_agree">
+            <input
+              type="checkbox"
+              id="policy"
+              class="form__bottom_btns_radio"
+            />
+            <label for="policy" class="form__bottom_btn_agree_text"
+              >Погоджуюся з політикою конф.</label
+            >
+          </div>
+          <button type="submit" class="form__bottom_btns_send">
+            Надіслати
+          </button>
+        </div>
+      </form>
+      <div class="hero__info_container_contact">
+        <div class="hero__info_wrapper_contact">
+          <div class="hero__info_title_container_contact">
+            <h3 class="hero__info_title_contact">
+              <span>Чистота</span> без турбот!
+            </h3>
+            <p class="hero__info_desc_contact">
+              Професійне прибирання з любов’ю до деталей
+            </p>
+          </div>
+          <div class="hero__info_content_container">
+            <div class="hero__info_socials">
+              <div class="hero__info_social">
+                <img src="{% static 'phone_big.png' %}" alt="" />
+                <div class="hero__info_social_text">
+                  <h4 class="hero__info_social_title">Телефон / WhatsApp</h4>
+                  <p class="hero__info_social_desc">+48-881-026-026</p>
+                </div>
+              </div>
+              <div class="hero__info_social">
+                <img src="{% static 'facebook_logo.png' %}" alt="" />
+                <div class="hero__info_social_text">
+                  <h4 class="hero__info_social_title">FaceBook</h4>
+                  <p class="hero__info_social_desc">cleaning_gliwice</p>
+                </div>
+              </div>
+              <div class="hero__info_social">
+                <img src="{% static 'envelope.png' %}" alt="" />
+                <div class="hero__info_social_text">
+                  <h4 class="hero__info_social_title">Ел. пошта</h4>
+                  <p class="hero__info_social_desc">
+                    cleandiamond.iryna@gmail.com
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="hero__info_qrcode">
+              <img src="{% static 'qrcode_home.png' %}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+</body>
+{% endblock %}

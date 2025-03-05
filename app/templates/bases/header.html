@@ -1,0 +1,98 @@
+{% load static %}
+
+<header class="header__wrapper">
+  <div class="container">
+    <nav class="navbar">
+      <div class="navbar__logo">
+        <img src="{% static 'logo.png' %}" alt="" />
+      </div>
+      <div class="navbar__info">
+        <a class="navbar__info_number" href="tel:+48881016026">
+          <p class="navbar__info_number_phone">+48-881-016-026</p>
+          <img src="{% static 'phone.png' %}" alt="" />
+        </a>
+        <a
+          class="navbar__info_location"
+          href="https://www.google.com/maps"
+          target="_blank"
+        >
+          <p class="navbar__info_location_text">Gliwice i okolice</p>
+          <img src="{% static 'location.png' %}" alt="" />
+        </a>
+      </div>
+      <div class="navbar__buttons">
+        <ul class="navbar__links">
+          <a href="{% url 'index' %}" class="navbar__link">
+            <li>Strona główna</li>
+          </a>
+          <a href="#" class="navbar__link">
+            <li>Usługi</li>
+          </a>
+          <a href="{% url 'about_us' %}" class="navbar__link">
+            <li>O nas</li>
+          </a>
+          <a href="{% url 'contact_us' %}" class="navbar__link">
+            <li>Kontakty</li>
+          </a>
+          <a class="navbar__btn" href="{% url 'catalog' %}">Katalog</a>
+        </ul>
+      </div>
+      <button class="navbar__burger_btn">
+        <img src="{% static 'burger_icon.png' %}" alt="" />
+      </button>
+    </nav>
+  </div>
+  <div class="header__mini_wrapper">
+    <div class="header__mini_container">
+      <a class="header__mini_catalog_btn" href="#">Katalog</a>
+      <div class="headerr__mini_links_container">
+        <a class="header__mini_link" href="{% url 'index' %}">
+          <div class="header__mini_link_info">
+            <img src="{% static 'home_icon.png' %}" alt="" />
+            <p class="header__mini_link_info_text header__mini_active">
+              Strona główna
+            </p>
+          </div>
+          <img src="{% static 'arrow_right.png' %}" alt="" />
+        </a>
+        <a class="header__mini_link" href="{% url 'about_us' %}">
+          <div class="header__mini_link_info">
+            <img src="{% static 'info_icon.png' %}" alt="" />
+            <p class="header__mini_link_info_text">O nas</p>
+          </div>
+          <img src="{% static 'arrow_right.png' %}" alt="" />
+        </a>
+        <a class="header__mini_link" href="#">
+          <div class="header__mini_link_info">
+            <img src="{% static 'cleaning_icon.png' %}" alt="" />
+            <p class="header__mini_link_info_text">Usługi</p>
+          </div>
+          <img src="{% static 'arrow_right.png' %}" alt="" />
+        </a>
+        <a class="header__mini_link" href="{% url 'contact_us' %}">
+          <div class="header__mini_link_info">
+            <img src="{% static 'phone_icon.png' %}" alt="" />
+            <p class="header__mini_link_info_text">Kontakty</p>
+          </div>
+          <img src="{% static 'arrow_right.png' %}" alt="" />
+        </a>
+        <a class="header__mini_link" href="tel:+48881016026">
+          <div class="header__mini_info_number">
+            <p class="header__mini_info_number_phone">+48-881-016-026</p>
+            <img src="{% static 'phone.png' %}" alt="" />
+          </div>
+        </a>
+        <a
+          class="header__mini_link"
+          href="https://www.google.com/maps"
+          target="_blank"
+        >
+          <div class="header__mini_info_location">
+            <p class="header__mini_info_location_text">Gliwice i okolice</p>
+            <img src="{% static 'location.png' %}" alt="" />
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
