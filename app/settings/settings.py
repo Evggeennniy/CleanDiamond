@@ -26,10 +26,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-INTERNAL_IPS = [
-    '127.0.0.1',
-    'localhost',
-]
+INTERNAL_IPS = []
 
 AUTH_USER_MODEL = 'users.User'
 
@@ -42,7 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    # "debug_toolbar",
+    "debug_toolbar",
 
     'users',
     'catalog',
@@ -134,6 +131,7 @@ STATICFILES_DIRS = [
     BASE_DIR / '..' / 'static' / 'css',
     BASE_DIR / '..' / 'static' / 'icons',
     BASE_DIR / '..' / 'static' / 'imgs',
+    BASE_DIR / '..' / 'static' / 'js',
 ]
 STATIC_ROOT = 'static/'
 
