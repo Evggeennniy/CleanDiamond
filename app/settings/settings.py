@@ -22,7 +22,7 @@ SECRET_KEY = os.getenv('SECRET')
 TBOT_API_KEY = os.getenv('TBOT_API_KEY')
 RECEIVER_TG_ID = os.getenv('RECEIVER_TG_ID')
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "debug_toolbar",
+    # "debug_toolbar",
 
     'users',
     'catalog',
