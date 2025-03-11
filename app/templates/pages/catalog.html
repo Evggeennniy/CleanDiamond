@@ -21,115 +21,32 @@
           </div>
         </div>
         <div class="services__content_right">
+          {% for category in object_list %}
           <div class="service__info_container">
             <div class="service__info_main">
               <div class="service__info_main_title">
-                <img src="{% static 'home_blue_icon.png' %}" alt="" />
+                <img src="{{ category.icon.url }}" alt="" />
                 <h4 class="service__info_main_title_text">
-                  Sprzątanie mieszkań i domów
+                  {{ category.name }}
                 </h4>
               </div>
               <p class="service__info_price">
-                <span>795</span> - <span>145</span> PLN
+                <span>{{ category.min_price }}</span> -
+                <span>{{ category.max_price }}</span> PLN
               </p>
             </div>
+            {% for service in category.services.all %}
             <div class="service__info_price_variant">
               <h5 class="service__info_price_variant_title">
-                Generalne sprzątanie
+                {{ service.name }}
               </h5>
-              <p class="service__info_price"><span>45</span> PLN</p>
-            </div>
-            <div class="service__info_price_variant">
-              <h5 class="service__info_price_variant_title">
-                Sprzątanie bieżące
-              </h5>
-              <p class="service__info_price"><span>85</span> PLN</p>
-            </div>
-            <div class="service__info_price_variant">
-              <h5 class="service__info_price_variant_title">
-                Ekspresowe sprzątanie
-              </h5>
-              <p class="service__info_price"><span>113</span> PLN</p>
-            </div>
-            <div class="service__info_price_variant">
-              <h5 class="service__info_price_variant_title">
-                Sprzątanie po imprezie
-              </h5>
-              <p class="service__info_price"><span>243</span> PLN</p>
-            </div>
-          </div>
-          <div class="service__info_container">
-            <div class="service__info_main">
-              <div class="service__info_main_title">
-                <img src="{% static 'tools_icon.png' %}" alt="" />
-                <h4 class="service__info_main_title_text">
-                  Sprzątanie po remoncie
-                </h4>
-              </div>
               <p class="service__info_price">
-                <span>555</span> - <span>155</span> PLN
+                <span>{{ service.price }}</span> PLN
               </p>
             </div>
-            <div class="service__info_price_variant">
-              <h5 class="service__info_price_variant_title">
-                Usuwanie kurzu budowlanego
-              </h5>
-              <p class="service__info_price"><span>73</span> PLN</p>
-            </div>
-            <div class="service__info_price_variant">
-              <h5 class="service__info_price_variant_title">
-                Czyszczenie plam po farbie, kleju, tynku
-              </h5>
-              <p class="service__info_price"><span>73</span> PLN</p>
-            </div>
-            <div class="service__info_price_variant">
-              <h5 class="service__info_price_variant_title">
-                Mycie podłóg, ścian, drzwi
-              </h5>
-              <p class="service__info_price"><span>73</span> PLN</p>
-            </div>
-            <div class="service__info_price_variant">
-              <h5 class="service__info_price_variant_title">
-                Czyszczenie armatury sanitarnej i powierzchni kuchennych
-              </h5>
-              <p class="service__info_price"><span>73</span> PLN</p>
-            </div>
+            {% endfor %}
           </div>
-          <div class="service__info_container">
-            <div class="service__info_main">
-              <div class="service__info_main_title">
-                <img src="{% static 'office_icon.png' %}" alt="" />
-                <h4 class="service__info_main_title_text">Sprzątanie biur</h4>
-              </div>
-              <p class="service__info_price">
-                <span>555</span> - <span>155</span> PLN
-              </p>
-            </div>
-            <div class="service__info_price_variant">
-              <h5 class="service__info_price_variant_title">
-                Codzienne lub generalne sprzątanie
-              </h5>
-              <p class="service__info_price"><span>93</span> PLN</p>
-            </div>
-            <div class="service__info_price_variant">
-              <h5 class="service__info_price_variant_title">
-                Usuwanie kurzu z miejsc pracy
-              </h5>
-              <p class="service__info_price"><span>303</span> PLN</p>
-            </div>
-            <div class="service__info_price_variant">
-              <h5 class="service__info_price_variant_title">
-                Czyszczenie sprzętu biurowego i mebli
-              </h5>
-              <p class="service__info_price"><span>103</span> PLN</p>
-            </div>
-            <div class="service__info_price_variant">
-              <h5 class="service__info_price_variant_title">
-                Mycie podłóg i toalet
-              </h5>
-              <p class="service__info_price"><span>53</span> PLN</p>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
       <div class="services__cards_container">
