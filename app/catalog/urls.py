@@ -16,8 +16,10 @@ Including another URLconf
 """
 
 from django.urls import path
-from catalog.views import CatalogView
+from catalog.views import CatalogView, ServicesView, SendOrderForm
 
 urlpatterns = [
-    path('', CatalogView.as_view(), name='catalog')
+    path('list', CatalogView.as_view(), name='catalog'),
+    path('services', ServicesView.as_view(), name='services'),
+    path('create_order', SendOrderForm.as_view(), name='create_order')
 ]

@@ -1,0 +1,263 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<body>
+  {% include 'header.html' %}
+  <section class="hero__wrapper_calc">
+    <div class="hero__title_calc_wrapper">
+      <div class="container hero__title_calc_container">
+        <h4 class="hero__title_calc_text">
+          <span>Wybierz, co Cię interesuje</span> a my obliczymy cenę!
+        </h4>
+        <img src="{% static 'cleaning_utils_img.png' %}" alt="" />
+      </div>
+    </div>
+    <form
+      method="post"
+      action="{% url 'create_order' %}"
+      class="container hero__content_calc_container"
+    >
+      {% csrf_token %}
+      <div class="hero__form_container hero__calc_form">
+        <p class="hero__form_title">Obliczymy cenę dla Ciebie.</p>
+        <div class="form__inputs__container">
+          <div class="form__input_container">
+            <label class="form__name_input_text" for="name">Imię</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              class="form__input_field"
+              placeholder="Mateusz Kowalski"
+            />
+          </div>
+
+          <div class="form__input_container">
+            <label class="form__name_input_text" for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              class="form__input_field"
+              placeholder="testmail.gmail.com"
+            />
+          </div>
+
+          <div class="form__input_container form__textarea_container">
+            <label class="form__name_input_text" for="work">Zakres pracy</label>
+            <textarea
+              id="work"
+              name="description"
+              class="form__input_field form__textarea"
+              placeholder="Opis zamówienia."
+            ></textarea>
+          </div>
+        </div>
+        <p class="form__error_msg">
+          Aby kontynuować, wybierz interesującą Cię usługę z listy!
+        </p>
+        <div class="form__bottom_btns">
+          <div class="form__bottom_btns_agree">
+            <input
+              type="checkbox"
+              id="policy"
+              class="form__bottom_btns_radio"
+            />
+            <label for="policy" class="form__bottom_btn_agree_text"
+              >Zgadzam się z polityką prywatności.</label
+            >
+          </div>
+          <button type="submit" class="form__bottom_btns_send">Wyślij</button>
+        </div>
+      </div>
+      <div class="hero__services_lists_container">
+        <div class="hero__services_list">
+          <h5 class="hero__services_title">Wybierz, czego potrzebujesz!</h5>
+          <div class="hero__services">
+            <div class="hero__service">
+              <label class="hero__service_name" for="hero__service_top_1"
+                >Sprzątanie Regularne</label
+              >
+              <input
+                type="checkbox"
+                id="hero__service_top_1"
+                name="Sprzątanie Regularne"
+                class="hero__service_btn"
+              />
+            </div>
+            <div class="hero__service">
+              <label class="hero__service_name" for="hero__service_top_2"
+                >Kompleksowe odświeżenie twojego domu</label
+              >
+              <input
+                type="checkbox"
+                id="hero__service_top_2"
+                name="Kompleksowe odświeżenie twojego domu"
+                class="hero__service_btn"
+              />
+            </div>
+            <div class="hero__service">
+              <label class="hero__service_name" for="hero__service_top_3"
+                >Sprzątanie podstawowe</label
+              >
+              <input
+                type="checkbox"
+                id="hero__service_top_3"
+                name="Sprzątanie podstawowe"
+                class="hero__service_btn"
+              />
+            </div>
+            <div class="hero__service">
+              <label class="hero__service_name" for="hero__service_top_4"
+                >Pozbądź się kurzu i bałaganu po budowie!</label
+              >
+              <input
+                type="checkbox"
+                id="hero__service_top_4"
+                name="Pozbądź się kurzu i bałaganu po budowie!"
+                class="hero__service_btn"
+              />
+            </div>
+            <div class="hero__service">
+              <label class="hero__service_name" for="hero__service_top_5"
+                >Przygotuj nieruchomość na nowego najemcę</label
+              >
+              <input
+                type="checkbox"
+                id="hero__service_top_5"
+                name="Przygotuj nieruchomość na nowego najemcę"
+                class="hero__service_btn"
+              />
+            </div>
+            <div class="hero__service">
+              <label class="hero__service_name" for="hero__service_top_6"
+                >Mycie okien</label
+              >
+              <input
+                type="checkbox"
+                id="hero__service_top_6"
+                name="Mycie okien"
+                class="hero__service_btn"
+              />
+            </div>
+            <div class="hero__service">
+              <label class="hero__service_name" for="hero__service_top_7"
+                >Pranie tapicerki</label
+              >
+              <input
+                type="checkbox"
+                id="hero__service_top_7"
+                name="Pranie tapicerki"
+                class="hero__service_btn"
+              />
+            </div>
+            <div class="hero__service">
+              <label class="hero__service_name" for="hero__service_top_8"
+                >Odśwież swoje meble!</label
+              >
+              <input
+                type="checkbox"
+                id="hero__service_top_8"
+                name="Odśwież swoje meble!"
+                class="hero__service_btn"
+              />
+            </div>
+            <div class="hero__service">
+              <label class="hero__service_name" for="hero__service_top_9"
+                >Sprzątanie biura</label
+              >
+              <input
+                type="checkbox"
+                id="hero__service_top_9"
+                name="Sprzątanie biura"
+                class="hero__service_btn"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="hero__services_divider">
+          <h5 class="hero__services_divider_title">Wielkość m2</h5>
+          <input
+            class="hero__services_divider_input"
+            maxlength="10"
+            placeholder="23m3"
+            name="square"
+          />
+        </div>
+        <div class="hero__services_list">
+          <h5 class="hero__services_title">Dodatkowe usługi</h5>
+          <div class="hero__services">
+            <div class="hero__service">
+              <label class="hero__service_name" for="hero__service_bottom_1"
+                >Mycie piekarnika</label
+              >
+              <input
+                type="checkbox"
+                id="hero__service_bottom_1"
+                name="Mycie piekarnika"
+                class="hero__service_btn"
+              />
+            </div>
+            <div class="hero__service">
+              <label class="hero__service_name" for="hero__service_bottom_2"
+                >Czyszczenie wnętrza okapu i filtrów</label
+              >
+              <input
+                type="checkbox"
+                id="hero__service_bottom_2"
+                name="Czyszczenie wnętrza okapu i filtrów"
+                class="hero__service_btn"
+              />
+            </div>
+            <div class="hero__service">
+              <label class="hero__service_name" for="hero__service_bottom_3"
+                >Mycie i dezynfekcja wnętrza lodówki</label
+              >
+              <input
+                type="checkbox"
+                id="hero__service_bottom_3"
+                name="Mycie i dezynfekcja wnętrza lodówki"
+                class="hero__service_btn"
+              />
+            </div>
+            <div class="hero__service">
+              <label class="hero__service_name" for="hero__service_bottom_4"
+                >Czyszczenie kuchenki mikrofalowej</label
+              >
+              <input
+                type="checkbox"
+                id="hero__service_bottom_4"
+                name="Czyszczenie kuchenki mikrofalowej"
+                class="hero__service_btn"
+              />
+            </div>
+            <div class="hero__service">
+              <label class="hero__service_name" for="hero__service_bottom_5"
+                >Czyszczenie pralki w Środku</label
+              >
+              <input
+                type="checkbox"
+                id="hero__service_bottom_5"
+                name="Czyszczenie pralki w Środku"
+                class="hero__service_btn"
+              />
+            </div>
+            <div class="hero__service">
+              <label class="hero__service_name" for="hero__service_bottom_6"
+                >Czyszczenie wnętrza szafek kuchennych</label
+              >
+              <input
+                type="checkbox"
+                id="hero__service_bottom_6"
+                name="Czyszczenie wnętrza szafek kuchennych"
+                class="hero__service_btn"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+  {% include 'footer.html' %}
+</body>
+{% endblock %}

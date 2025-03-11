@@ -18,6 +18,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from catalog.views import IndexView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
@@ -25,4 +27,8 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("aboutus/", include("aboutus.urls")),
     path("catalog/", include("catalog.urls")),
+    path('__debug__/', include('debug_toolbar.urls')),
 ]
+
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
