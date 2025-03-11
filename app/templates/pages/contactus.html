@@ -13,22 +13,22 @@
         class="hero__form_container"
       >
         {% csrf_token %}
-        <p class="hero__form_title">Ми зв'яжемося з вами</p>
+        <p class="hero__form_title">Obliczymy cenę dla Ciebie.</p>
         <div class="form__inputs__container">
           <div class="form__input_container">
-            <label class="form__name_input_text" for="name">Ім'я</label>
+            <label class="form__name_input_text" for="name">Imię </label>
             <input
               type="text"
               id="name"
               name="name"
               autocomplete="name"
               class="form__input_field"
-              placeholder="Христина Соломій"
+              placeholder="Mateusz Kowalski"
             />
           </div>
 
           <div class="form__input_container">
-            <label class="form__name_input_text" for="email">Пошта</label>
+            <label class="form__name_input_text" for="email">E-mail </label>
             <input
               type="email"
               id="email"
@@ -40,11 +40,13 @@
           </div>
 
           <div class="form__input_container form__textarea_container">
-            <label class="form__name_input_text" for="work">Обсяг роботи</label>
+            <label class="form__name_input_text" for="work"
+              >Zakres pracy
+            </label>
             <textarea
               id="work"
               class="form__input_field form__textarea"
-              placeholder="Опис замовлення"
+              placeholder="Opis zamówienia."
               name="message"
             ></textarea>
           </div>
@@ -57,22 +59,20 @@
               class="form__bottom_btns_radio"
             />
             <label for="policy" class="form__bottom_btn_agree_text"
-              >Погоджуюся з політикою конф.</label
+              >Zgadzam się z polityką prywatności.</label
             >
           </div>
-          <button type="submit" class="form__bottom_btns_send">
-            Надіслати
-          </button>
+          <button type="submit" class="form__bottom_btns_send">Wyślij</button>
         </div>
       </form>
       <div class="hero__info_container_contact">
         <div class="hero__info_wrapper_contact">
           <div class="hero__info_title_container_contact">
             <h3 class="hero__info_title_contact">
-              <span>Чистота</span> без турбот!
+              <span>Czystość </span> bez problemów!
             </h3>
             <p class="hero__info_desc_contact">
-              Професійне прибирання з любов’ю до деталей
+              Profesjonalne sprzątanie z miłością do detali.
             </p>
           </div>
           <div class="hero__info_content_container">
@@ -80,7 +80,7 @@
               <div class="hero__info_social">
                 <img src="{% static 'phone_big.png' %}" alt="" />
                 <div class="hero__info_social_text">
-                  <h4 class="hero__info_social_title">Телефон / WhatsApp</h4>
+                  <h4 class="hero__info_social_title">Telefon / WhatsApp</h4>
                   <p class="hero__info_social_desc">+48-881-026-026</p>
                 </div>
               </div>
@@ -94,7 +94,7 @@
               <div class="hero__info_social">
                 <img src="{% static 'envelope.png' %}" alt="" />
                 <div class="hero__info_social_text">
-                  <h4 class="hero__info_social_title">Ел. пошта</h4>
+                  <h4 class="hero__info_social_title">E-mail</h4>
                   <p class="hero__info_social_desc">
                     cleandiamond.iryna@gmail.com
                   </p>

@@ -6,8 +6,10 @@ navbarBurgerBtn.addEventListener("click", () => {
 
   if (isHidden) {
     navbarModal.classList.add("open");
+    document.body.classList.add("overflow_hidden");
   } else {
     navbarModal.classList.remove("open");
+    document.body.classList.remove("overflow_hidden");
   }
 });
 
