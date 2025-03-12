@@ -4,7 +4,9 @@
   <div class="container">
     <nav class="navbar">
       <div class="navbar__logo">
-        <img src="{% static 'logo.png' %}" alt="" />
+        <a href="{% url 'index' %}">
+          <img src="{% static 'logo.png' %}" alt="" />
+        </a>
       </div>
       <div class="navbar__info">
         <a class="navbar__info_number" href="tel:+48881016026">
