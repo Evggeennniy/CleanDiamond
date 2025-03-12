@@ -31,9 +31,7 @@ sendButton.addEventListener("click", (event) => {
 
   setTimeout(() => {
     modal.classList.remove("visible");
-
     sendButton.disabled = false;
-
     sendButton.closest("form").submit();
   }, 3000);
 });
