@@ -1731,6 +1731,59 @@
   display: none;
 }
 
+.contact__modal_wrapper {
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  height: fit-content;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  margin-top: 8px;
+  transition: transform 0.25s ease-in-out;
+}
+
+.contact__modal_wrapper.visible {
+  transform: translate(-50%, 0);
+}
+
+.contact__modal_container {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  overflow-wrap: anywhere;
+  background-color: var(--clr-white);
+  border-radius: 50px;
+  padding: 10px 16px;
+  max-width: 418px;
+  gap: 8px;
+}
+
+.contact__modal_container img {
+  width: 100%;
+  height: 100%;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.contact__modal_text {
+  font-size: 20px;
+  user-select: none;
+}
+
+@media (max-width: 640px) {
+  .contact__modal_text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact__modal_wrapper {
+    margin-top: 5px;
+  }
+}
+
 @media (max-width: 1536px) {
   .experience__companies_container {
     gap: 100px;
