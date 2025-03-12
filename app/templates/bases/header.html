@@ -22,19 +22,31 @@
       </div>
       <div class="navbar__buttons">
         <ul class="navbar__links">
-          <a href="{% url 'index' %}" class="navbar__link">
+          <a
+            href="{% url 'index' %}"
+            class="navbar__link {% if request.resolver_match.url_name == 'index' %}navbar__active{% endif %}"
+          >
             <li>Strona główna</li>
           </a>
-          <a href="{% url 'services' %}" class="navbar__link">
+          <a
+            href="{% url 'services' %}"
+            class="navbar__link {% if request.resolver_match.url_name == 'services' %}navbar__active{% endif %}"
+          >
             <li>Usługi</li>
           </a>
-          <a href="{% url 'about_us' %}" class="navbar__link">
+          <a
+            href="{% url 'about_us' %}"
+            class="navbar__link {% if request.resolver_match.url_name == 'about_us' %}navbar__active{% endif %}"
+          >
             <li>O nas</li>
           </a>
-          <a href="{% url 'contact_us' %}" class="navbar__link">
+          <a
+            href="{% url 'contact_us' %}"
+            class="navbar__link {% if request.resolver_match.url_name == 'contact_us' %}navbar__active{% endif %}"
+          >
             <li>Kontakty</li>
           </a>
-          <a class="navbar__btn" href="{% url 'catalog' %}">Katalog</a>
+          <a href="{% url 'catalog' %}" class="navbar__btn">Katalog</a>
         </ul>
       </div>
       <button class="navbar__burger_btn">
@@ -44,12 +56,14 @@
   </div>
   <div class="header__mini_wrapper">
     <div class="header__mini_container">
-      <a class="header__mini_catalog_btn" href="#">Katalog</a>
+      <a class="header__mini_catalog_btn" href="{% url 'catalog' %}">Katalog</a>
       <div class="headerr__mini_links_container">
         <a class="header__mini_link" href="{% url 'index' %}">
           <div class="header__mini_link_info">
             <img src="{% static 'home_icon.png' %}" alt="" />
-            <p class="header__mini_link_info_text header__mini_active">
+            <p
+              class="header__mini_link_info_text {% if request.resolver_match.url_name == 'index' %}header__mini_active{% endif %}"
+            >
               Strona główna
             </p>
           </div>
@@ -58,21 +72,33 @@
         <a class="header__mini_link" href="{% url 'about_us' %}">
           <div class="header__mini_link_info">
             <img src="{% static 'info_icon.png' %}" alt="" />
-            <p class="header__mini_link_info_text">O nas</p>
+            <p
+              class="header__mini_link_info_text {% if request.resolver_match.url_name == 'about_us' %}header__mini_active{% endif %}"
+            >
+              O nas
+            </p>
           </div>
           <img src="{% static 'arrow_right.png' %}" alt="" />
         </a>
         <a class="header__mini_link" href="{% url 'services' %}">
           <div class="header__mini_link_info">
             <img src="{% static 'cleaning_icon.png' %}" alt="" />
-            <p class="header__mini_link_info_text">Usługi</p>
+            <p
+              class="header__mini_link_info_text {% if request.resolver_match.url_name == 'services' %}header__mini_active{% endif %}"
+            >
+              Usługi
+            </p>
           </div>
           <img src="{% static 'arrow_right.png' %}" alt="" />
         </a>
         <a class="header__mini_link" href="{% url 'contact_us' %}">
           <div class="header__mini_link_info">
             <img src="{% static 'phone_icon.png' %}" alt="" />
-            <p class="header__mini_link_info_text">Kontakty</p>
+            <p
+              class="header__mini_link_info_text {% if request.resolver_match.url_name == 'contact_us' %}header__mini_active{% endif %}"
+            >
+              Kontakty
+            </p>
           </div>
           <img src="{% static 'arrow_right.png' %}" alt="" />
         </a>
