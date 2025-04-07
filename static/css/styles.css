@@ -829,7 +829,25 @@
 .services__content_img img {
   position: absolute;
   width: 100%;
+  height: 100%;
   transform: translateX(1.5rem);
+}
+
+.services__content_text {
+  display: flex;
+  align-items: center;
+}
+
+.services__content_text_title {
+  display: flex;
+  flex-direction: column;
+  font-size: 28px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.services__content_text_title span {
+  color: var(--clr-blue);
 }
 
 .services__content_left_btns {

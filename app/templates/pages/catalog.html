@@ -1,4 +1,5 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
+
 <body>
   {% include 'header.html' %}
   <section class="services__wrapper">
@@ -7,6 +8,10 @@
         <div class="services__content_left">
           <div class="services__content_img">
             <img src="{% static 'uslugi_img.png' %}" alt="" />
+          </div>
+          <div class="services__content_text">
+            <p class="services__content_text_title">Cena zalezy od <span>stopnia zabrudzenia.</span>
+            </p>
           </div>
           <div class="services__content_left_btns">
             <a href="#" class="services__content_left_order_btn">
@@ -30,10 +35,6 @@
                   {{ category.name }}
                 </h4>
               </div>
-              <p class="service__info_price">
-                <span>{{ category.min_price }}</span> -
-                <span>{{ category.max_price }}</span> PLN
-              </p>
             </div>
             {% for service in category.services.all %}
             <div class="service__info_price_variant">
